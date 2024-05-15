@@ -19,11 +19,14 @@ function Header() {
           </Link>
           <Link to="/profile">
             {currentUser ? (
-              <img
-                src={currentUser.profilePicture}
-                alt="profile"
-                className="h-7 w-7 rounded-full object-cover"
-              />
+              <div className="flex">
+                <li className="mr-2">Profile</li>{" "}
+                <img
+                  src={currentUser.profilePicture}
+                  alt="profile"
+                  className="h-7 w-7 rounded-full object-cover"
+                />
+              </div>
             ) : (
               <li>Sign In</li>
             )}
